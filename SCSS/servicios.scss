@@ -1,0 +1,31 @@
+.BodyRep {color: whitesmoke;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 450px);
+    grid-template-areas:
+    "DivHijo1 DivHijo2"
+    "DivHijo3 DivHijo4"
+    "DivHijo5 DivHijo6"
+    "DivHijo7 DivHijo8";
+    padding: 20px;
+    justify-content: space-evenly;}
+     
+.TitRep {font-size: 50px;
+   color: whitesmoke;}
+
+.SubRep {font-size: 30px;
+   color: whitesmoke;}
+
+.EstRep {word-spacing: unset;}
+
+table {color: whitesmoke;
+ background-color: rgb(128, 32, 32);
+ border-collapse:collapse;}
+
+.lista {text-align: justify;}
+
+.DisplayHilos {display: inline;}
+
+.ImgServicios {width: 500px;
+         height: 400px;}
