@@ -1,13 +1,15 @@
 @charset "UTF-8";
 ul {
   list-style: none; }
-  ul li {
-    padding: 15px;
-    display: inline-block; }
-  ul a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #444444; }
+
+ul li {
+  padding: 15px;
+  display: inline-block; }
+
+ul a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #444444; }
 
 /* General */
 .titulo {
@@ -46,43 +48,70 @@ a {
   text-decoration: none;
   color: white; }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
-
+/*footer {position: absolute; 
+    bottom: 0; 
+    width: 100%;
+    margin-top: 50px;}*/
 .direccion {
-  text-align: right;
-  margin-right: 50px;
-  font-size: 20px; }
+  /*text-align:right; 
+        margin-right: 50px;*/ }
 
 .horario {
   color: white;
-  margin-left: 50px;
-  font-size: 20px; }
+  /*margin-left: 50px;*/ }
 
-.header__menu__carousel__image {
-  width: 500px;
-  height: 750px; }
+/*.header__menu__carousel__image {width: 500px;
+                                height: 750px;}
 
-.header__menu__carousel__text {
-  font-size: 50px; }
+.header__menu__carousel__text {font-size: 50px;}
 
-.header__menu__link1 {
-  font-size: 40px; }
+.header__menu__link1 {font-size: 40px;}
 
-.header__menu__link {
-  font-size: 30px; }
-
+.header__menu__link {font-size: 30px;}*/
 @media only screen and (min-width: 320px) {
   nav {
     font-size: 10px; }
   .titulo {
     font-size: 20px; }
   .direccion {
-    font-size: 5px; }
+    font-size: 12px;
+    text-align: center; }
   .horario {
-    font-size: 5px; } }
+    font-size: 12px;
+    text-align: center; }
+  .text-carrusel {
+    font-size: 12px; }
+  .subtitulo {
+    font-size: 20px; }
+  .descrip {
+    font-size: 12px; }
+  .TituloReparacion {
+    font-size: 12px; }
+  .font_rep {
+    font-size: 10px; }
+  .TitRep {
+    font-size: 20px; }
+  .SubRep {
+    font-size: 12px; }
+  .ImgServicios {
+    width: 150px;
+    height: 100px; }
+  #DesCon {
+    font-size: 10px; }
+  .tel {
+    font-size: 12px; }
+  .whats {
+    font-size: 12px; }
+  .telefono-imagen {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px; }
+  .whatsapp-imagen {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px; }
+  .FotoCasa {
+    height: 200px; } }
 
 @media only screen and (min-width: 768px) {
   nav {
@@ -90,9 +119,44 @@ footer {
   .titulo {
     font-size: 40px; }
   .direccion {
-    font-size: 10px; }
+    font-size: 15px;
+    text-align: center; }
   .horario {
-    font-size: 10px; } }
+    font-size: 15px;
+    text-align: center; }
+  .text-carrusel {
+    font-size: 30px; }
+  .subtitulo {
+    font-size: 35px; }
+  ·descrip {
+    font-size: 20px; }
+  .TituloReparacion {
+    font-size: 20px; }
+  .font_rep {
+    font-size: 15px; }
+  .TitRep {
+    font-size: 35px; }
+  .SubRep {
+    font-size: 10px; }
+  .ImgServicios {
+    width: 300px;
+    height: 200px; }
+  #DesCon {
+    font-size: 15px; }
+  .tel {
+    font-size: 15px; }
+  .whats {
+    font-size: 15px; }
+  .telefono-imagen {
+    height: 35px;
+    width: 35px;
+    border-radius: 35px; }
+  .whatsapp-imagen {
+    height: 35px;
+    width: 35px;
+    border-radius: 35px; }
+  .FotoCasa {
+    height: 350px; } }
 
 @media only screen and (min-width: 1024px) {
   nav {
@@ -102,18 +166,50 @@ footer {
   .direccion {
     font-size: 20px; }
   .horario {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .text-carrusel {
+    font-size: 50px; }
+  .subtitulo {
+    font-size: 50px; }
+  .descrip {
+    font-size: 30px; }
+  .TituloReparacion {
+    font-size: 30px; }
+  .font_rep {
+    font-size: 20px; }
+  .TitRep {
+    font-size: 50px; }
+  .SubRep {
+    font-size: 30px; }
+  .ImgServicios {
+    width: 500px;
+    height: 400px; }
+  #DesCon {
+    font-size: 20px; }
+  .tel {
+    font-size: 20px; }
+  .whats {
+    font-size: 20px; }
+  .telefono-imagen {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px; }
+  .whatsapp-imagen {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px; }
+  .FotoCasa {
+    height: 500px; } }
 
 /*Nosotros*/
-.Intro {
-  font-size: 30px;
+.descrip {
+  /*font-size: 30px;*/
   color: whitesmoke;
   text-align: justify;
   padding: 50px; }
 
 .FotoCasa {
   width: 100%;
-  height: 500px;
   border-radius: 20px; }
 
 .MiniTitulo {
@@ -125,12 +221,10 @@ footer {
 
 /*Reparación*/
 .TituloReparacion {
-  font-size: 30px;
   text-align: center;
   color: whitesmoke; }
 
 .FormularioRep {
-  font-size: 20px;
   text-align: center;
   color: whitesmoke; }
 
@@ -146,11 +240,9 @@ footer {
   justify-content: space-evenly; }
 
 .TitRep {
-  font-size: 50px;
   color: whitesmoke; }
 
 .SubRep {
-  font-size: 30px;
   color: whitesmoke; }
 
 .EstRep {
@@ -167,13 +259,8 @@ table {
 .DisplayHilos {
   display: inline; }
 
-.ImgServicios {
-  width: 500px;
-  height: 400px; }
-
 /*Contacto*/
 #DesCon {
-  font-size: 20px;
   text-align: center;
   color: whitesmoke;
   display: grid;
@@ -187,19 +274,7 @@ table {
   grid-area: mail; }
 
 .tel {
-  grid-area: tel;
-  font-size: 30px; }
+  grid-area: tel; }
 
 .whats {
-  grid-area: whats;
-  font-size: 30px; }
-
-.whatsapp-imagen {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px; }
-
-.telefono-imagen {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px; }
+  grid-area: whats; }
