@@ -1,50 +1,77 @@
-let total = 0;
+let producto = 0;
+let cantidadProducto = 0;
+let precio = 0;
 
-function agregarAlCarrito() {
-
-    do {
-        let producto = prompt("¿Quieres comprar una máquina Gemsy Recta, Gemsy Overlock o Gemsy Collareta?", "Ej: Gemsy Recta");
-        let cantidad = parseInt(prompt("¿Cuántas quieres comprar?", 0));
-
-        let precio = 0;
-
-        switch (producto) {
-            case "Gemsy Recta":
-                precio = 70000;
-                break;
-            case "Gemsy Overlock":
-                precio = 89000;
-                break;
-            case "Samsung Collareta":
-                precio = 120000;
-                break;
-            default:
-                alert("Algunos de los datos ingresados no es correcto");
-                precio = 0;
-                cantidad = 0;
-            }
-
-            total = total + precio * cantidad;
-            otroProducto = confirm("¿Quieres agregar otro producto?");
-        } while(otroProducto);
-}
-
-function aplicarIva(total){
-    if(total >= 1) {
-        total = total * 1.21;
+class Pedido {
+    constructor(producto, precio, cantidad) {
+        this.producto = producto,
+        this.cantidad = cantidad,
+        this.precio = precio,
+        this.descuento = 0,
+        this.subTotal = 0,
+        this.total = 0
     }
 
-    return total;
-}
-
-function aplicarDescuento(total){
-    if(total >= 100000) {
-        total = total * 0.90;
-        alert("El total de tu compra es $"+total);
+    calcularSubTotal() {
+        this.subTotal = this.precio * this.cantidad;
     }
 
-    return total;
+    calcularIva() {
+        return this.subTotal * 0.21;
+    }
+
+    calcularDescuento() {
+        if (this.subTotal >= 100000) {
+            return this.subTotal * 0.10
+        } else {
+            return this.descuento * 0
+        }
+    }
+
+    calcularTotal() {
+        this.total = this.subTotal + this.calcularDescuento() + this.calcularIva();
+    }
 }
 
-agregarAlCarrito ();
-aplicarDescuento(aplicarIva(total));
+function pedidoProducto() {
+    while(!producto || producto == 0 || producto > 3) {
+        producto = parseInt(prompt("¿Qué máquina desea comprar?:\n 1: Recta($70000)\n 2: Overlock($89000)\n 3: Collareta($120000)"));
+    }
+
+    switch (producto) {
+        case 1:
+            producto = "Recta";
+            precio = 70000;
+            break;
+        case 2:
+            producto = "Overlock";
+            precio = 89000;
+            break;
+        case 3:
+            producto = "Collareta";
+            precio = 120000;
+            break;
+    }
+
+    while(!cantidadProducto || cantidadProducto == 0){
+        cantidadProducto = parseInt(prompt("Producto elegido: " + producto + "\n Introduzca la cantidad deseada. (solo números)"));
+    }
+
+    return new Pedido(producto, precio, cantidadProducto)
+}
+
+alert("Bienvenido/a a Casa Spahn");
+
+const pedido = pedidoProducto();
+
+pedido.calcularSubTotal();
+pedido.calcularIva();
+pedido.calcularDescuento
+pedido.calcularTotal();
+
+alert("Detalle del pedido:\n" + 
+    "- " + pedido.producto + " x " + pedido.cantidad + ": $" + pedido.precio * pedido.cantidad + "\n" + 
+    "- IVA 21%: $" + pedido.calcularIva() + "\n" + 
+    "- Descuento: $" + pedido.calcularDescuento() + "\n" + 
+    "Total = $" + pedido.total
+);
