@@ -35,7 +35,7 @@ class Pedido {
 
 function pedidoProducto() {
     while(!producto || producto == 0 || producto > 3) {
-        producto = parseInt(prompt("¿Qué máquina desea comprar?:\n 1: Recta($70000)\n 2: Overlock($89000)\n 3: Collareta($120000)"));
+        producto = parseInt(prompt("¿Qué máquina le gustaría comprar?:\n 1: Recta($70000)\n 2: Overlock($89000)\n 3: Collareta($120000)"));
     }
 
     switch (producto) {
@@ -69,9 +69,36 @@ pedido.calcularIva();
 pedido.calcularDescuento
 pedido.calcularTotal();
 
-alert("Detalle del pedido:\n" + 
+alert("Cálculo del pedido:\n" + 
     "- " + pedido.producto + " x " + pedido.cantidad + ": $" + pedido.precio * pedido.cantidad + "\n" + 
     "- IVA 21%: $" + pedido.calcularIva() + "\n" + 
     "- Descuento: $" + pedido.calcularDescuento() + "\n" + 
     "Total = $" + pedido.total
 );
+
+class Maquina {
+    constructor(nombre, precio) {
+        this.nombre = nombre.toUpperCase();
+        this.precio = parseFloat(precio);
+        this.vendido = false;
+    }
+    sumarIva() {
+        this.precio = this.precio * 1.21;
+    }
+}
+
+const maquinas = [];
+
+const maquina1 = new Maquina("Recta", "70000");
+maquinas.push(maquina1)
+
+const maquina2 = new Maquina("Overlock 3H", "89000");
+maquinas.push(maquina2)
+
+const maquina3 = new Maquina("Collareta", "120000");
+maquinas.push(maquina3)
+
+for(const maquina of maquinas)
+    maquina.sumarIva();
+
+console.log(maquinas);
